@@ -16,6 +16,7 @@ test:
     - pwd ~
     - ifconfig
     - pip freeze
+    - pstree -p
     - echo HelloWorld
     - curl http://127.0.0.1/example
     - exit 0
