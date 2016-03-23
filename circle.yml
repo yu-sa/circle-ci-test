@@ -4,7 +4,12 @@ machine:
 
 dependencies:
   pre:
+    - chmod -R 777 ./example
     - pip install -r ./requirements.txt
+    - export PYTHONPATH="/home/ubuntu/flask_template/example/application"
+    - python ./application/manage.py runserver:
+          background: true
+    - sleep 5
 
 test:
   override:
@@ -12,4 +17,5 @@ test:
     - ifconfig
     - pip freeze
     - echo HelloWorld
+    - curl http://127.0.0.1/example
     - exit 0
