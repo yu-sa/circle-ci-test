@@ -2,9 +2,14 @@ machine:
   python:
     version: 3.5.0
 
+dependencies:
+  pre:
+    - pip install -r ./requirements.txt
+
 test:
   override:
     - pwd ~
     - ifconfig
+    - pip freeze
     - echo HelloWorld
     - exit 0
