@@ -5,7 +5,7 @@ machine:
 dependencies:
   pre:
     - chmod -R 777 ./example
-    - pip install -r  --upgrade ./requirements.txt
+    - pip install -r ./requirements.txt --upgrade
     - export PYTHONPATH="/home/ubuntu/flask_template/example/application"
     - python ./application/manage.py runserver:
           background: true
