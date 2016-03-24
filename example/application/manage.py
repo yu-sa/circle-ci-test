@@ -1,4 +1,4 @@
-from flaskext.script import Server, Manager
+from flask.ext.script import Server, Manager
 from flasksample import app
 
 manager = Manager(app)
