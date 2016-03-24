@@ -15,9 +15,9 @@ test:
   override:
     - pwd ~
     - ls -la
-    - ifconfig
     - pip freeze
     - cat nohup.out
     - echo HelloWorld
     - curl http://127.0.0.1:8000/admin/
+    - py.test example/application/tests/
     - exit 0
