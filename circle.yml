@@ -14,9 +14,9 @@ test:
     - pwd ~
     - ifconfig
     - pip freeze
-    - pstree -p | grep python
     - echo HelloWorld
     - python ./application/manage.py runserver:
           background: true
+    - pstree -p | grep python
     - curl http://127.0.0.1:8000/admin/
     - exit 0
