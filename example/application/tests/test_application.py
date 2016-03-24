@@ -10,3 +10,5 @@ def test_example():
     assert response.status_code == 200
     assert "Error" not in response.text
 
+def test_error():
+    assert False
