@@ -6,7 +6,7 @@ dependencies:
   pre:
     - chmod -R 777 ./example
     - pip install -r ./requirements.txt --upgrade
-    - export PYTHONPATH="/home/ubuntu/flask_template/example/application"
+    - export PYTHONPATH="/home/ubuntu/circle-ci-test/example/application"
     - sleep 5
 
 test:
