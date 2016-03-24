@@ -14,7 +14,7 @@ dependencies:
 test:
   override:
     - pwd ~
-    - le -la
+    - ls -la
     - ifconfig
     - pip freeze
     - echo HelloWorld
