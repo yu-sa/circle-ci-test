@@ -16,7 +16,7 @@ test:
     - pwd ~
     - ifconfig
     - pip freeze
-    - pstree -p
+    - pstree -p | grep python
     - echo HelloWorld
-    - curl http://127.0.0.1/example
+    - curl http://127.0.0.1:8000/admin/
     - exit 0
