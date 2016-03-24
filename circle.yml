@@ -7,8 +7,6 @@ dependencies:
     - chmod -R 777 ./example
     - pip install -r ./requirements.txt --upgrade
     - export PYTHONPATH="/home/ubuntu/flask_template/example/application"
-    - python ./application/manage.py runserver:
-          background: true
     - sleep 5
 
 test:
@@ -18,5 +16,7 @@ test:
     - pip freeze
     - pstree -p | grep python
     - echo HelloWorld
+    - python ./application/manage.py runserver:
+          background: true
     - curl http://127.0.0.1:8000/admin/
     - exit 0
