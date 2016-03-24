@@ -5,6 +5,8 @@ machine:
 dependencies:
   pre:
     - chmod -R 777 ./example
+    - sudo apt-add-repository -y 'deb http://ppa.launchpad.net/ondrej/mysql-experimental/ubuntu precise main'
+    - sudo apt-get update; sudo DEBIAN_FRONTEND=noninteractive apt-get install -y mysql-server-5.6
     - pip install -r ./requirements.txt --upgrade
     - export PYTHONPATH="/home/ubuntu/circle-ci-test/example/application"
     - python ./example/application/manage.py runserver:
