@@ -17,6 +17,7 @@ test:
     - ls -la
     - ifconfig
     - pip freeze
+    - cat nohup.out
     - echo HelloWorld
     - pstree -p | grep python
     - curl http://127.0.0.1:8000/admin/
