@@ -20,5 +20,6 @@ test:
     - cat nohup.out
     - echo HelloWorld
     - pstree -p | grep python
+    - python ./application/manage.py runserver&
     - curl http://127.0.0.1:8000/admin/
     - exit 0
