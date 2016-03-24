@@ -7,16 +7,17 @@ dependencies:
     - chmod -R 777 ./example
     - pip install -r ./requirements.txt --upgrade
     - export PYTHONPATH="/home/ubuntu/circle-ci-test/example/application"
+    - python ./application/manage.py runserver:
+          background: true
     - sleep 5
 
 test:
   override:
     - pwd ~
+    - le -la
     - ifconfig
     - pip freeze
     - echo HelloWorld
-    - python ./application/manage.py runserver:
-          background: true
     - pstree -p | grep python
     - curl http://127.0.0.1:8000/admin/
     - exit 0
